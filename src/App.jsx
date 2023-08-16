@@ -1,7 +1,5 @@
 import './App.css'
-import Users from './Users'
-import Posts from './Posts'
-import Comments from './Comments'
+import Table from './Table'
 import { useEffect, useState} from 'react'
 
 function App() {
@@ -35,7 +33,7 @@ function App() {
     let buttonText = event.target.textContent.toLowerCase()
     setFocusedElement(buttonText)
   }
-
+  
   return (
     <main>
       <header>
@@ -54,11 +52,7 @@ function App() {
         </nav>
       </header>
       <section className='content'>
-        <ul>
-          {content.map(item => (
-            <li key={item.id} className='data__item'>{JSON.stringify(item, null, 2)}</li>
-          ))}
-        </ul>
+        {content.length > 0 && <Table content={content}/>}
       </section>
     </main>
   

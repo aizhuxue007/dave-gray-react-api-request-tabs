@@ -7,6 +7,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.table__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .tabs {
   width: 100%;
   padding: 0;
@@ -47,8 +53,8 @@ button:focus {
 }
 
 .content {
-  width: 90%;
-  margin-top: 1.4em;
+  width: 100%;
+  padding: 2em;
 }
 
 .data__item {
